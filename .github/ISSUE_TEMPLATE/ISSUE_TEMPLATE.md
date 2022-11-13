@@ -1,7 +1,7 @@
 ---
 name: iOS Part Issue Template
 about: '🍎 합동세미나 이슈 템플릿입니다.'
-title: '[FEAT] 작업 내용'
+title: '[Feat] 작업 내용'
 labels: ''
 assignees: ''
 ---
