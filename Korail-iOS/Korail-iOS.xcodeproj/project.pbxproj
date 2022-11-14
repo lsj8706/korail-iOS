@@ -12,6 +12,11 @@
 		CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFD129226BDE0046F4D4 /* ViewController.swift */; };
 		CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD629226BE00046F4D4 /* Assets.xcassets */; };
 		CED3DFDA29226BE00046F4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */; };
+		CED3DFF5292273CB0046F4D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFF4292273CB0046F4D4 /* SnapKit */; };
+		CED3DFF8292273D90046F4D4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFF7292273D90046F4D4 /* Then */; };
+		CED3DFFB292273F60046F4D4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFFA292273F60046F4D4 /* Moya */; };
+		CED3DFFE292274060046F4D4 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFFD292274060046F4D4 /* SwiftyColor */; };
+		CED3E0012922743E0046F4D4 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CED3E0002922743E0046F4D4 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED3DFFE292274060046F4D4 /* SwiftyColor in Frameworks */,
+				CED3DFF5292273CB0046F4D4 /* SnapKit in Frameworks */,
+				CED3DFF8292273D90046F4D4 /* Then in Frameworks */,
+				CED3E0012922743E0046F4D4 /* FSCalendar in Frameworks */,
+				CED3DFFB292273F60046F4D4 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +234,13 @@
 			dependencies = (
 			);
 			name = "Korail-iOS";
+			packageProductDependencies = (
+				CED3DFF4292273CB0046F4D4 /* SnapKit */,
+				CED3DFF7292273D90046F4D4 /* Then */,
+				CED3DFFA292273F60046F4D4 /* Moya */,
+				CED3DFFD292274060046F4D4 /* SwiftyColor */,
+				CED3E0002922743E0046F4D4 /* FSCalendar */,
+			);
 			productName = "Korail-iOS";
 			productReference = CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +269,13 @@
 				Base,
 			);
 			mainGroup = CED3DFC129226BDE0046F4D4;
+			packageReferences = (
+				CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */,
+				CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */,
+				CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
+				CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = CED3DFCB29226BDE0046F4D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -486,6 +510,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED3DFF4292273CB0046F4D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CED3DFF7292273D90046F4D4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CED3DFFA292273F60046F4D4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CED3DFFD292274060046F4D4 /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
+		};
+		CED3E0002922743E0046F4D4 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CED3DFC229226BDE0046F4D4 /* Project object */;
 }
