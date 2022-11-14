@@ -54,14 +54,158 @@
 		CED3DFCC29226BDE0046F4D4 /* Korail-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */,
-				CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */,
+				CED3DFE329226F6F0046F4D4 /* Global */,
+				CED3DFE229226F690046F4D4 /* Network */,
+				CED3DFE129226F630046F4D4 /* Screens */,
 				CED3DFD129226BDE0046F4D4 /* ViewController.swift */,
-				CED3DFD629226BE00046F4D4 /* Assets.xcassets */,
-				CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */,
 				CED3DFDB29226BE00046F4D4 /* Info.plist */,
 			);
 			path = "Korail-iOS";
+			sourceTree = "<group>";
+		};
+		CED3DFE129226F630046F4D4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFEE2922714A0046F4D4 /* TicketReservationScene */,
+				CED3DFED292271230046F4D4 /* TicketConfirmationScene */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CED3DFE229226F690046F4D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFEC292270370046F4D4 /* APIService */,
+				CED3DFEB292270220046F4D4 /* Foundation */,
+				CED3DFEA2922701D0046F4D4 /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CED3DFE329226F6F0046F4D4 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFE929226FE10046F4D4 /* Extension */,
+				CED3DFE829226FD70046F4D4 /* Literal */,
+				CED3DFE729226FD10046F4D4 /* Resource */,
+				CED3DFE629226FC60046F4D4 /* Supports */,
+				CED3DFE529226FC00046F4D4 /* UIComponents */,
+				CED3DFE429226FAB0046F4D4 /* Utils */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CED3DFE429226FAB0046F4D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CED3DFE529226FC00046F4D4 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CED3DFE629226FC60046F4D4 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */,
+				CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CED3DFE729226FD10046F4D4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFF22922727E0046F4D4 /* Fonts */,
+				CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */,
+				CED3DFD629226BE00046F4D4 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CED3DFE829226FD70046F4D4 /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		CED3DFE929226FE10046F4D4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CED3DFEA2922701D0046F4D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CED3DFEB292270220046F4D4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		CED3DFEC292270370046F4D4 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		CED3DFED292271230046F4D4 /* TicketConfirmationScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TicketConfirmationScene;
+			sourceTree = "<group>";
+		};
+		CED3DFEE2922714A0046F4D4 /* TicketReservationScene */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFF1292272160046F4D4 /* LocationFormView */,
+				CED3DFF0292271ED0046F4D4 /* InfoFormView */,
+				CED3DFEF2922718D0046F4D4 /* TrainInquiryView */,
+			);
+			path = TicketReservationScene;
+			sourceTree = "<group>";
+		};
+		CED3DFEF2922718D0046F4D4 /* TrainInquiryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrainInquiryView;
+			sourceTree = "<group>";
+		};
+		CED3DFF0292271ED0046F4D4 /* InfoFormView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoFormView;
+			sourceTree = "<group>";
+		};
+		CED3DFF1292272160046F4D4 /* LocationFormView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationFormView;
+			sourceTree = "<group>";
+		};
+		CED3DFF22922727E0046F4D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
