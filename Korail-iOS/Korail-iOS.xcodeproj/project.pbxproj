@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */; };
+		CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */; };
+		CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFD129226BDE0046F4D4 /* ViewController.swift */; };
+		CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD629226BE00046F4D4 /* Assets.xcassets */; };
+		CED3DFDA29226BE00046F4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */; };
+		CED3DFF5292273CB0046F4D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFF4292273CB0046F4D4 /* SnapKit */; };
+		CED3DFF8292273D90046F4D4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFF7292273D90046F4D4 /* Then */; };
+		CED3DFFB292273F60046F4D4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFFA292273F60046F4D4 /* Moya */; };
+		CED3DFFE292274060046F4D4 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFFD292274060046F4D4 /* SwiftyColor */; };
+		CED3E0012922743E0046F4D4 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CED3E0002922743E0046F4D4 /* FSCalendar */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Korail-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CED3DFD129226BDE0046F4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CED3DFD629226BE00046F4D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CED3DFD929226BE00046F4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CED3DFDB29226BE00046F4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CED3DFC729226BDE0046F4D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3DFFE292274060046F4D4 /* SwiftyColor in Frameworks */,
+				CED3DFF5292273CB0046F4D4 /* SnapKit in Frameworks */,
+				CED3DFF8292273D90046F4D4 /* Then in Frameworks */,
+				CED3E0012922743E0046F4D4 /* FSCalendar in Frameworks */,
+				CED3DFFB292273F60046F4D4 /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CED3DFC129226BDE0046F4D4 = {
+			isa = PBXGroup;
+			children = (
+				CED3DFCC29226BDE0046F4D4 /* Korail-iOS */,
+				CED3DFCB29226BDE0046F4D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CED3DFCB29226BDE0046F4D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED3DFCC29226BDE0046F4D4 /* Korail-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFE329226F6F0046F4D4 /* Global */,
+				CED3DFE229226F690046F4D4 /* Network */,
+				CED3DFE129226F630046F4D4 /* Screens */,
+				CED3DFD129226BDE0046F4D4 /* ViewController.swift */,
+				CED3DFDB29226BE00046F4D4 /* Info.plist */,
+			);
+			path = "Korail-iOS";
+			sourceTree = "<group>";
+		};
+		CED3DFE129226F630046F4D4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFEE2922714A0046F4D4 /* TicketReservationScene */,
+				CED3DFED292271230046F4D4 /* TicketConfirmationScene */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CED3DFE229226F690046F4D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFEC292270370046F4D4 /* APIService */,
+				CED3DFEB292270220046F4D4 /* Foundation */,
+				CED3DFEA2922701D0046F4D4 /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CED3DFE329226F6F0046F4D4 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFE929226FE10046F4D4 /* Extension */,
+				CED3DFE829226FD70046F4D4 /* Literal */,
+				CED3DFE729226FD10046F4D4 /* Resource */,
+				CED3DFE629226FC60046F4D4 /* Supports */,
+				CED3DFE529226FC00046F4D4 /* UIComponents */,
+				CED3DFE429226FAB0046F4D4 /* Utils */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CED3DFE429226FAB0046F4D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CED3DFE529226FC00046F4D4 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CED3DFE629226FC60046F4D4 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */,
+				CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CED3DFE729226FD10046F4D4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFF22922727E0046F4D4 /* Fonts */,
+				CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */,
+				CED3DFD629226BE00046F4D4 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CED3DFE829226FD70046F4D4 /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		CED3DFE929226FE10046F4D4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CED3DFEA2922701D0046F4D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CED3DFEB292270220046F4D4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		CED3DFEC292270370046F4D4 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		CED3DFED292271230046F4D4 /* TicketConfirmationScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TicketConfirmationScene;
+			sourceTree = "<group>";
+		};
+		CED3DFEE2922714A0046F4D4 /* TicketReservationScene */ = {
+			isa = PBXGroup;
+			children = (
+				CED3DFF1292272160046F4D4 /* LocationFormView */,
+				CED3DFF0292271ED0046F4D4 /* InfoFormView */,
+				CED3DFEF2922718D0046F4D4 /* TrainInquiryView */,
+			);
+			path = TicketReservationScene;
+			sourceTree = "<group>";
+		};
+		CED3DFEF2922718D0046F4D4 /* TrainInquiryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrainInquiryView;
+			sourceTree = "<group>";
+		};
+		CED3DFF0292271ED0046F4D4 /* InfoFormView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoFormView;
+			sourceTree = "<group>";
+		};
+		CED3DFF1292272160046F4D4 /* LocationFormView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationFormView;
+			sourceTree = "<group>";
+		};
+		CED3DFF22922727E0046F4D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CED3DFC929226BDE0046F4D4 /* Korail-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED3DFDE29226BE00046F4D4 /* Build configuration list for PBXNativeTarget "Korail-iOS" */;
+			buildPhases = (
+				CED3DFC629226BDE0046F4D4 /* Sources */,
+				CED3DFC729226BDE0046F4D4 /* Frameworks */,
+				CED3DFC829226BDE0046F4D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Korail-iOS";
+			packageProductDependencies = (
+				CED3DFF4292273CB0046F4D4 /* SnapKit */,
+				CED3DFF7292273D90046F4D4 /* Then */,
+				CED3DFFA292273F60046F4D4 /* Moya */,
+				CED3DFFD292274060046F4D4 /* SwiftyColor */,
+				CED3E0002922743E0046F4D4 /* FSCalendar */,
+			);
+			productName = "Korail-iOS";
+			productReference = CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CED3DFC229226BDE0046F4D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					CED3DFC929226BDE0046F4D4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = CED3DFC529226BDE0046F4D4 /* Build configuration list for PBXProject "Korail-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CED3DFC129226BDE0046F4D4;
+			packageReferences = (
+				CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */,
+				CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */,
+				CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
+				CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
+			productRefGroup = CED3DFCB29226BDE0046F4D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CED3DFC929226BDE0046F4D4 /* Korail-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CED3DFC829226BDE0046F4D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3DFDA29226BE00046F4D4 /* LaunchScreen.storyboard in Resources */,
+				CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CED3DFC629226BDE0046F4D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */,
+				CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */,
+				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED3DFD929226BE00046F4D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CED3DFDC29226BE00046F4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CED3DFDD29226BE00046F4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CED3DFDF29226BE00046F4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Korail-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soptrail.Korail-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CED3DFE029226BE00046F4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Korail-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soptrail.Korail-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CED3DFC529226BDE0046F4D4 /* Build configuration list for PBXProject "Korail-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED3DFDC29226BE00046F4D4 /* Debug */,
+				CED3DFDD29226BE00046F4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED3DFDE29226BE00046F4D4 /* Build configuration list for PBXNativeTarget "Korail-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED3DFDF29226BE00046F4D4 /* Debug */,
+				CED3DFE029226BE00046F4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED3DFF4292273CB0046F4D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF3292273CB0046F4D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CED3DFF7292273D90046F4D4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF6292273D90046F4D4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CED3DFFA292273F60046F4D4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFF9292273F60046F4D4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CED3DFFD292274060046F4D4 /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFFC292274060046F4D4 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
+		};
+		CED3E0002922743E0046F4D4 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED3DFFF2922743E0046F4D4 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CED3DFC229226BDE0046F4D4 /* Project object */;
+}
