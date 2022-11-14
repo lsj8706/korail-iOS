@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  LocationFormVC.swift
 //  Korail-iOS
 //
 //  Created by sejin on 2022/11/14.
 //
 
 import UIKit
+import SnapKit
+import Then
 
-class ViewController: UIViewController {
-
+class LocationFormVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .purple
     }
-
-
 }
-

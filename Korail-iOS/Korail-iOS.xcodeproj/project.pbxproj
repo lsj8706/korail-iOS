@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEAF53BA29227A06005BAB29 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53B929227A06005BAB29 /* ImageLiterals.swift */; };
+		CEAF53BC29227D1F005BAB29 /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53BB29227D1F005BAB29 /* ColorLiterals.swift */; };
+		CEAF53C029227F50005BAB29 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEAF53BD29227F50005BAB29 /* Pretendard-Medium.otf */; };
+		CEAF53C129227F50005BAB29 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEAF53BE29227F50005BAB29 /* Pretendard-Regular.otf */; };
+		CEAF53C229227F50005BAB29 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEAF53BF29227F50005BAB29 /* Pretendard-SemiBold.otf */; };
+		CEAF53C429228005005BAB29 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C329228005005BAB29 /* FontLiterals.swift */; };
+		CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C6292280F0005BAB29 /* TabBarController.swift */; };
+		CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C82922833C005BAB29 /* LocationFormVC.swift */; };
 		CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */; };
 		CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */; };
-		CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFD129226BDE0046F4D4 /* ViewController.swift */; };
 		CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD629226BE00046F4D4 /* Assets.xcassets */; };
 		CED3DFDA29226BE00046F4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD829226BE00046F4D4 /* LaunchScreen.storyboard */; };
 		CED3DFF5292273CB0046F4D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED3DFF4292273CB0046F4D4 /* SnapKit */; };
@@ -20,10 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEAF53B929227A06005BAB29 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		CEAF53BB29227D1F005BAB29 /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
+		CEAF53BD29227F50005BAB29 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		CEAF53BE29227F50005BAB29 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		CEAF53BF29227F50005BAB29 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		CEAF53C329228005005BAB29 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
+		CEAF53C6292280F0005BAB29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CEAF53C82922833C005BAB29 /* LocationFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFormVC.swift; sourceTree = "<group>"; };
 		CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Korail-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CED3DFD129226BDE0046F4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CED3DFD629226BE00046F4D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED3DFD929226BE00046F4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CED3DFDB29226BE00046F4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEAF53C5292280DD005BAB29 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF53C6292280F0005BAB29 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		CED3DFC129226BDE0046F4D4 = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +89,6 @@
 				CED3DFE329226F6F0046F4D4 /* Global */,
 				CED3DFE229226F690046F4D4 /* Network */,
 				CED3DFE129226F630046F4D4 /* Screens */,
-				CED3DFD129226BDE0046F4D4 /* ViewController.swift */,
 				CED3DFDB29226BE00046F4D4 /* Info.plist */,
 			);
 			path = "Korail-iOS";
@@ -76,6 +97,7 @@
 		CED3DFE129226F630046F4D4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF53C5292280DD005BAB29 /* TabBar */,
 				CED3DFEE2922714A0046F4D4 /* TicketReservationScene */,
 				CED3DFED292271230046F4D4 /* TicketConfirmationScene */,
 			);
@@ -141,6 +163,9 @@
 		CED3DFE829226FD70046F4D4 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF53B929227A06005BAB29 /* ImageLiterals.swift */,
+				CEAF53BB29227D1F005BAB29 /* ColorLiterals.swift */,
+				CEAF53C329228005005BAB29 /* FontLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -207,6 +232,7 @@
 		CED3DFF1292272160046F4D4 /* LocationFormView */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF53C82922833C005BAB29 /* LocationFormVC.swift */,
 			);
 			path = LocationFormView;
 			sourceTree = "<group>";
@@ -214,6 +240,9 @@
 		CED3DFF22922727E0046F4D4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF53BD29227F50005BAB29 /* Pretendard-Medium.otf */,
+				CEAF53BE29227F50005BAB29 /* Pretendard-Regular.otf */,
+				CEAF53BF29227F50005BAB29 /* Pretendard-SemiBold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -291,7 +320,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED3DFDA29226BE00046F4D4 /* LaunchScreen.storyboard in Resources */,
+				CEAF53C129227F50005BAB29 /* Pretendard-Regular.otf in Resources */,
+				CEAF53C229227F50005BAB29 /* Pretendard-SemiBold.otf in Resources */,
 				CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */,
+				CEAF53C029227F50005BAB29 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */,
+				CEAF53BA29227A06005BAB29 /* ImageLiterals.swift in Sources */,
+				CEAF53C429228005005BAB29 /* FontLiterals.swift in Sources */,
 				CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */,
+				CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */,
+				CEAF53BC29227D1F005BAB29 /* ColorLiterals.swift in Sources */,
+				CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
