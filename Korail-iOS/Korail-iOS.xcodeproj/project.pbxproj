@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEAF53BA29227A06005BAB29 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53B929227A06005BAB29 /* ImageLiterals.swift */; };
 		CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */; };
 		CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */; };
 		CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFD129226BDE0046F4D4 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEAF53B929227A06005BAB29 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Korail-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		CED3DFE829226FD70046F4D4 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF53B929227A06005BAB29 /* ImageLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED3DFD229226BDE0046F4D4 /* ViewController.swift in Sources */,
+				CEAF53BA29227A06005BAB29 /* ImageLiterals.swift in Sources */,
 				CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
 			);
