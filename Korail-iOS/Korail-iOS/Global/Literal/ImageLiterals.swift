@@ -8,7 +8,7 @@
 import UIKit
 
 enum ImageLiterals {
-    static var icArrow: UIImage { .load(named: "ic_arror") }
+    static var icArrow: UIImage { .load(named: "ic_arrow") }
     static var icBigLeft: UIImage { .load(named: "ic_bigleft") }
     static var icCalendar: UIImage { .load(named: "ic_calendar") }
     static var icChange: UIImage { .load(named: "ic_change") }
