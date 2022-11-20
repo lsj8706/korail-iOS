@@ -8,6 +8,6 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = "http://43.200.249.186:3000/trail"
+    static let baseURL = "http://43.200.249.186:3000"
     static let baseHeader = ["Content-Type": "application/json"]
 }
