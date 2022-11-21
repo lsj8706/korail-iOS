@@ -17,8 +17,6 @@ class TrainInquiryVC: UIViewController {
         $0.layer.applyShadow(alpha: 0.1, x: 0, y: 0, blur: 8)
     }
     
-    
-    
     private let topView = UIView()
     private let middleView = UIView()
     
