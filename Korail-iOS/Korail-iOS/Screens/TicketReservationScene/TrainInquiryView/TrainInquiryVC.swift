@@ -17,8 +17,10 @@ class TrainInquiryVC: UIViewController {
         $0.layer.applyShadow(alpha: 0.1, x: 0, y: 0, blur: 8)
     }
     
+    private let departArrivalView = UIView()
     private let topView = UIView()
     private let middleView = UIView()
+
     
     private let departureLabel = UILabel().then {
         $0.text = "서울"
@@ -39,6 +41,12 @@ class TrainInquiryVC: UIViewController {
     
     private let previousDateArrowButton = UIButton(type: .system).then {
         $0.setImage(ImageLiterals.icBigLeft, for: .normal)
+        $0.tintColor = .black
+    }
+    
+    private let nextDateArrowButton = UIButton(type: .system).then {
+        $0.setImage(ImageLiterals.icBigRight, for: .normal)
+        $0.tintColor = .black
     }
     
     private let selectedDateLabel = UILabel().then {
@@ -93,6 +101,7 @@ class TrainInquiryVC: UIViewController {
         super.viewDidLoad()
 
         setUI()
+        setLayout()
         setNavigationBar()
     }
 
@@ -112,40 +121,54 @@ extension TrainInquiryVC {
     
     private func setLayout() {
         view.addSubview(contentView)
-        
+                
         contentView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(24)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(17)
+            $0.bottom.equalToSuperview()
         }
         
         contentView.addSubviews(
-            departureLabel,
-            rightArrowImageView,
-            arrivalLabel,
+            departArrivalView,
             topView,
             middleView
         )
         
-        topView.addSubviews(
-            previousDateArrowButton,
-            selectedDateLabel
+        //topView.backgroundColor = .red
+        
+        departArrivalView.snp.makeConstraints {
+            $0.top.equalTo(contentView.snp.top).offset(22)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(97)
+            $0.height.equalTo(21)
+        }
+        
+        departArrivalView.addSubviews(
+            departureLabel,
+            rightArrowImageView,
+            arrivalLabel
         )
         
         rightArrowImageView.snp.makeConstraints {
-            $0.top.equalTo(contentView.snp.top).offset(22)
             $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
             $0.width.equalTo(12)
+            $0.height.equalTo(7)
         }
         
         departureLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.trailing.equalTo(rightArrowImageView.snp.leading)
+            $0.leading.equalToSuperview()
         }
         
         arrivalLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalTo(rightArrowImageView.snp.trailing)
+            $0.trailing.equalToSuperview()
         }
+        
+        topView.addSubviews(
+            previousDateArrowButton,
+            nextDateArrowButton,
+            selectedDateLabel
+        )
         
         topView.snp.makeConstraints {
             $0.top.equalTo(rightArrowImageView.snp.bottom).offset(23)
@@ -159,8 +182,15 @@ extension TrainInquiryVC {
         }
         
         previousDateArrowButton.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalTo(contentView.snp.top).offset(72)
             $0.leading.equalToSuperview().offset(20)
+            $0.width.equalTo(4.84)
+            $0.height.equalTo(11.29)
+        }
+        
+        nextDateArrowButton.snp.makeConstraints {
+            $0.top.equalTo(contentView.snp.top).offset(72)
+            $0.trailing.equalToSuperview().inset(20)
             $0.width.equalTo(4.84)
             $0.height.equalTo(11.29)
         }
