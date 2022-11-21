@@ -71,27 +71,27 @@ extension TrainInquiryViewCell {
         
         trainLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(25)
-            $0.leading.equalToSuperview().offset(13)
+            $0.centerX.equalTo(contentView.snp.leading).offset(37.5)
         }
         
         departureLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(25)
-            $0.leading.equalTo(trainLabel.snp.trailing).offset(23)
+            $0.centerX.equalTo(contentView.snp.leading).offset(102.5)
         }
         
         arrivalLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.leading.equalTo(departureLabel.snp.trailing).offset(20)
+            $0.top.equalToSuperview().offset(25)
+            $0.centerX.equalTo(contentView.snp.leading).offset(162.5)
         }
         
         suiteRoomInfoLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().inset(18)
+            $0.top.equalToSuperview().offset(25)
+            $0.centerX.equalTo(contentView.snp.trailing).offset(-45)
         }
         
         standardRoomInfoLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.trailing.equalTo(suiteRoomInfoLabel.snp.leading).offset(-23)
+            $0.top.equalToSuperview().offset(25)
+            $0.centerX.equalTo(contentView.snp.trailing).offset(-124)
         }
     }
     
