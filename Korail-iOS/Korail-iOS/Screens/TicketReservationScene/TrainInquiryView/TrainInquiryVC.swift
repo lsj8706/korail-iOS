@@ -60,7 +60,7 @@ class TrainInquiryVC: UIViewController {
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
         config.attributedTitle = AttributedString("전체", attributes: container)
-        config.image = ImageLiterals.icDrop
+        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 52
@@ -73,7 +73,7 @@ class TrainInquiryVC: UIViewController {
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
         config.attributedTitle = AttributedString("일반석", attributes: container)
-        config.image = ImageLiterals.icDrop
+        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePlacement = .trailing
@@ -85,9 +85,8 @@ class TrainInquiryVC: UIViewController {
         var config = UIButton.Configuration.filled()
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
-
         config.attributedTitle = AttributedString("직통", attributes: container)
-        config.image = ImageLiterals.icDrop
+        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 15
@@ -95,12 +94,6 @@ class TrainInquiryVC: UIViewController {
 
         $0.configuration = config
     }
-    
-//    private lazy var ticketInfoFormStackView = UIStackView(arrangedSubviews: [selectOptionButton1, selectOptionButton2, selectOptionButton3]).then {
-//        $0.axis = .horizontal
-//        $0.spacing = 6
-//        $0.distribution = .fill
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
