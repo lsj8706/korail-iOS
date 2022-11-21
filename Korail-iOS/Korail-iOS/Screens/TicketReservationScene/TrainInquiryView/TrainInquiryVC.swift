@@ -21,6 +21,7 @@ class TrainInquiryVC: UIViewController {
     private let topView = UIView()
     private let middleView = UIView()
     private let trainInquiryIndexView = UIView()
+    private let bottomView = UIView()
 
     
     private let departureLabel = UILabel().then {
@@ -125,14 +126,30 @@ class TrainInquiryVC: UIViewController {
         $0.textColor = .korailGray2
         $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
     }
-//    private lazy var trainInquiryTableView = UITableView().then {
-//        $0.backgroundColor = .clear
-//        $0.translatesAutoresizingMaskIntoConstraints = false
-//        $0.separatorStyle = .singleLine
-//        $0.separatorColor = .clear
-//        $0.delegate = self
-//        $0.dataSource = self
-//    }
+    
+    private lazy var trainInquiryTableView = UITableView().then {
+        $0.backgroundColor = .clear
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.separatorStyle = .singleLine
+        $0.separatorColor = .clear
+        $0.delegate = self
+        $0.dataSource = self
+    }
+    
+    var trainInquiryList: [TrainInquiryModel] = [
+        TrainInquiryModel(train: "무1314", departure: "06:39", arrival: "08:01", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1316", departure: "06:57", arrival: "08:31", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1318", departure: "07:10", arrival: "08:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1442", departure: "07:40", arrival: "09:20", standardRoomInfo: "매진", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1318", departure: "08:32", arrival: "09:58", standardRoomInfo: "매진", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1505", departure: "09:10", arrival: "10:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "11,800₩"),
+        TrainInquiryModel(train: "무1314", departure: "06:39", arrival: "08:01", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1316", departure: "06:57", arrival: "08:31", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1318", departure: "07:10", arrival: "08:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1442", departure: "07:40", arrival: "09:20", standardRoomInfo: "매진", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1318", departure: "08:32", arrival: "09:58", standardRoomInfo: "매진", suiteRoomInfo: "-"),
+        TrainInquiryModel(train: "무1505", departure: "09:10", arrival: "10:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "11,800₩")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,10 +157,14 @@ class TrainInquiryVC: UIViewController {
         setUI()
         setLayout()
         setNavigationBar()
+        register()
     }
 
 
 }
+
+
+
 
 extension TrainInquiryVC {
     
@@ -169,7 +190,8 @@ extension TrainInquiryVC {
             departArrivalView,
             topView,
             middleView,
-            trainInquiryIndexView
+            trainInquiryIndexView,
+            bottomView
         )
         
         topView.backgroundColor = .red
@@ -308,6 +330,48 @@ extension TrainInquiryVC {
             $0.top.equalToSuperview().offset(20)
             $0.trailing.equalTo(suiteRoomInfoIndexLabel.snp.leading).offset(-43)
         }
+        
+        bottomView.backgroundColor = .green
+        
+        bottomView.addSubview(trainInquiryTableView)
+        
+        bottomView.snp.makeConstraints {
+            $0.top.equalTo(trainInquiryIndexView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+        
+        trainInquiryTableView.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(67 * trainInquiryList.count)
+        }
+        
     }
+    
+    private func register() {
+        trainInquiryTableView.register(TrainInquiryViewCell.self, forCellReuseIdentifier: TrainInquiryViewCell.identifier)
+    }
+    
+}
+
+extension TrainInquiryVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 67
+    }
+}
+
+extension TrainInquiryVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trainInquiryList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let trainInquiryCell = tableView.dequeueReusableCell(withIdentifier: TrainInquiryViewCell.identifier, for: indexPath)
+                as? TrainInquiryViewCell else {return UITableViewCell()}
+        trainInquiryCell.dataBind(model: trainInquiryList[indexPath.row])
+        return trainInquiryCell
+        
+    }
+    
     
 }

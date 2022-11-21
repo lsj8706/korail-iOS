@@ -14,3 +14,4 @@ struct TrainInquiryModel {
     let standardRoomInfo: String
     let suiteRoomInfo: String
 }
+

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A36AA1CC29286824002329FA /* TrainInquiryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36AA1CB29286824002329FA /* TrainInquiryVC.swift */; };
 		A3D2FE8A292B6D9F001A68F9 /* TrainInquiryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2FE89292B6D9F001A68F9 /* TrainInquiryModel.swift */; };
+		A3D2FE8E292B774C001A68F9 /* TrainInquiryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */; };
 		CEA59AD22923679600675429 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD12923679600675429 /* UILabel+.swift */; };
 		CEA59AD4292367DF00675429 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD3292367DF00675429 /* UITextField+.swift */; };
 		CEA59AD62923680E00675429 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD52923680E00675429 /* UIView+.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		A36AA1CB29286824002329FA /* TrainInquiryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryVC.swift; sourceTree = "<group>"; };
 		A3D2FE89292B6D9F001A68F9 /* TrainInquiryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryModel.swift; sourceTree = "<group>"; };
+		A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryViewCell.swift; sourceTree = "<group>"; };
 		CEA59AD12923679600675429 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CEA59AD3292367DF00675429 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		CEA59AD52923680E00675429 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				A36AA1CB29286824002329FA /* TrainInquiryVC.swift */,
+				A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */,
 			);
 			path = TrainInquiryView;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				CEA59ADC292368A600675429 /* getClassName.swift in Sources */,
 				CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
+				A3D2FE8E292B774C001A68F9 /* TrainInquiryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
