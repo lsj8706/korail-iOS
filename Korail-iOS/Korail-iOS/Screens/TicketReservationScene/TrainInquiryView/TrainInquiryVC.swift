@@ -63,7 +63,8 @@ class TrainInquiryVC: UIViewController {
         config.image = ImageLiterals.icDrop
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
-        config.imagePadding = 9
+        config.imagePadding = 52
+        config.imagePlacement = .trailing
         $0.configuration = config
     }
     
@@ -75,7 +76,8 @@ class TrainInquiryVC: UIViewController {
         config.image = ImageLiterals.icDrop
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
-        config.imagePadding = 9
+        config.imagePlacement = .trailing
+        config.imagePadding = 35
         $0.configuration = config
     }
     
@@ -83,19 +85,22 @@ class TrainInquiryVC: UIViewController {
         var config = UIButton.Configuration.filled()
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
+
         config.attributedTitle = AttributedString("직통", attributes: container)
         config.image = ImageLiterals.icDrop
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
-        config.imagePadding = 9
+        config.imagePadding = 15
+        config.imagePlacement = .trailing
+
         $0.configuration = config
     }
     
-    private lazy var ticketInfoFormStackView = UIStackView(arrangedSubviews: [selectOptionButton1, selectOptionButton2, selectOptionButton3]).then {
-        $0.axis = .vertical
-        $0.spacing = 9
-        $0.distribution = .fillEqually
-    }
+//    private lazy var ticketInfoFormStackView = UIStackView(arrangedSubviews: [selectOptionButton1, selectOptionButton2, selectOptionButton3]).then {
+//        $0.axis = .horizontal
+//        $0.spacing = 6
+//        $0.distribution = .fill
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,7 +139,7 @@ extension TrainInquiryVC {
             middleView
         )
         
-        //topView.backgroundColor = .red
+        topView.backgroundColor = .red
         
         departArrivalView.snp.makeConstraints {
             $0.top.equalTo(contentView.snp.top).offset(22)
@@ -195,13 +200,40 @@ extension TrainInquiryVC {
             $0.height.equalTo(11.29)
         }
         
+        middleView.backgroundColor = .orange
+        
+        middleView.addSubviews(
+            selectOptionButton1,
+            selectOptionButton2,
+            selectOptionButton3
+        )
+        
         middleView.snp.makeConstraints {
             $0.top.equalTo(topView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.width.equalTo(43)
+            $0.height.equalTo(43)
         }
         
+        selectOptionButton1.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview().offset(12)
+            $0.height.equalToSuperview()
+            $0.width.equalTo(118)
+        }
         
+        selectOptionButton2.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalTo(selectOptionButton1.snp.trailing).offset(6)
+            $0.height.equalToSuperview()
+            $0.width.equalTo(118)
+        }
+        
+        selectOptionButton3.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(13)
+            $0.height.equalToSuperview()
+            $0.width.equalTo(83)
+        }
     }
     
 }
