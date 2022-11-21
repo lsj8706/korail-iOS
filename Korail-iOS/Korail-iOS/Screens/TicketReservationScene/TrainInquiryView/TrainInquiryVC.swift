@@ -20,6 +20,7 @@ class TrainInquiryVC: UIViewController {
     private let departArrivalView = UIView()
     private let topView = UIView()
     private let middleView = UIView()
+    private let trainInquiryIndexView = UIView()
 
     
     private let departureLabel = UILabel().then {
@@ -60,7 +61,7 @@ class TrainInquiryVC: UIViewController {
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
         config.attributedTitle = AttributedString("전체", attributes: container)
-        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
+        config.image = ImageLiterals.icDrop.withTintColor(.korailGray2)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 52
@@ -73,7 +74,7 @@ class TrainInquiryVC: UIViewController {
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
         config.attributedTitle = AttributedString("일반석", attributes: container)
-        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
+        config.image = ImageLiterals.icDrop.withTintColor(.korailGray2)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePlacement = .trailing
@@ -86,7 +87,7 @@ class TrainInquiryVC: UIViewController {
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
         config.attributedTitle = AttributedString("직통", attributes: container)
-        config.image = ImageLiterals.icDrop.withTintColor(.systemGray)
+        config.image = ImageLiterals.icDrop.withTintColor(.korailGray2)
         config.baseBackgroundColor = .korailGray1
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 15
@@ -94,6 +95,44 @@ class TrainInquiryVC: UIViewController {
 
         $0.configuration = config
     }
+    
+    private let trainIndexLabel = UILabel().then {
+        $0.text = "열차"
+        $0.textColor = .korailGray2
+        $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+    
+    private let departureIndexLabel = UILabel().then {
+        $0.text = "출발"
+        $0.textColor = .korailGray2
+        $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+    
+    private let arrivalIndexLabel = UILabel().then {
+        $0.text = "도착"
+        $0.textColor = .korailGray2
+        $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+    
+    private let standardRoomInfoIndexLabel = UILabel().then {
+        $0.text = "일반실"
+        $0.textColor = .korailGray2
+        $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+    
+    private let suiteRoomInfoIndexLabel = UILabel().then {
+        $0.text = "특/우등"
+        $0.textColor = .korailGray2
+        $0.font = UIFont.font(.pretendardRegular, ofSize: 12)
+    }
+//    private lazy var trainInquiryTableView = UITableView().then {
+//        $0.backgroundColor = .clear
+//        $0.translatesAutoresizingMaskIntoConstraints = false
+//        $0.separatorStyle = .singleLine
+//        $0.separatorColor = .clear
+//        $0.delegate = self
+//        $0.dataSource = self
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +168,8 @@ extension TrainInquiryVC {
         contentView.addSubviews(
             departArrivalView,
             topView,
-            middleView
+            middleView,
+            trainInquiryIndexView
         )
         
         topView.backgroundColor = .red
@@ -226,6 +266,47 @@ extension TrainInquiryVC {
             $0.trailing.equalToSuperview().inset(13)
             $0.height.equalToSuperview()
             $0.width.equalTo(83)
+        }
+        
+        trainInquiryIndexView.backgroundColor = .yellow
+        
+        trainInquiryIndexView.addSubviews(
+            trainIndexLabel,
+            departureIndexLabel,
+            arrivalIndexLabel,
+            standardRoomInfoIndexLabel,
+            suiteRoomInfoIndexLabel
+        )
+        
+        trainInquiryIndexView.snp.makeConstraints {
+            $0.top.equalTo(middleView.snp.bottom)
+            $0.trailing.leading.equalToSuperview()
+            $0.height.equalTo(59)
+        }
+        
+        trainIndexLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.equalToSuperview().offset(27)
+        }
+        
+        departureIndexLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.equalTo(trainIndexLabel.snp.trailing).offset(44)
+        }
+        
+        arrivalIndexLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.equalTo(departureIndexLabel.snp.trailing).offset(39)
+        }
+        
+        suiteRoomInfoIndexLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().inset(27)
+        }
+        
+        standardRoomInfoIndexLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.trailing.equalTo(suiteRoomInfoIndexLabel.snp.leading).offset(-43)
         }
     }
     
