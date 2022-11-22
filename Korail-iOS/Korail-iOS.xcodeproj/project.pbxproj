@@ -21,6 +21,11 @@
 		CEAF53C429228005005BAB29 /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C329228005005BAB29 /* FontLiterals.swift */; };
 		CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C6292280F0005BAB29 /* TabBarController.swift */; };
 		CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF53C82922833C005BAB29 /* LocationFormVC.swift */; };
+		CEC74445292A7DE700C8D56D /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC74444292A7DE700C8D56D /* Encodable+.swift */; };
+		CEC74447292A7DFF00C8D56D /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC74446292A7DFF00C8D56D /* NetworkLoggerPlugin.swift */; };
+		CEC74449292A7E2100C8D56D /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC74448292A7E2100C8D56D /* APIConstants.swift */; };
+		CEC7444B292A7E7200C8D56D /* TrailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7444A292A7E7200C8D56D /* TrailRouter.swift */; };
+		CEC7444D292A7F6F00C8D56D /* TrailLocationResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7444C292A7F6F00C8D56D /* TrailLocationResponseDto.swift */; };
 		CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */; };
 		CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */; };
 		CED3DFD729226BE00046F4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3DFD629226BE00046F4D4 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		CEAF53C329228005005BAB29 /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
 		CEAF53C6292280F0005BAB29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEAF53C82922833C005BAB29 /* LocationFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFormVC.swift; sourceTree = "<group>"; };
+		CEC74444292A7DE700C8D56D /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		CEC74446292A7DFF00C8D56D /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		CEC74448292A7E2100C8D56D /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CEC7444A292A7E7200C8D56D /* TrailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailRouter.swift; sourceTree = "<group>"; };
+		CEC7444C292A7F6F00C8D56D /* TrailLocationResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailLocationResponseDto.swift; sourceTree = "<group>"; };
 		CED3DFCA29226BDE0046F4D4 /* Korail-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Korail-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED3DFCD29226BDE0046F4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED3DFCF29226BDE0046F4D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,9 +129,9 @@
 		CED3DFE229226F690046F4D4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CED3DFEC292270370046F4D4 /* APIService */,
+				CED3DFEC292270370046F4D4 /* Router */,
 				CED3DFEB292270220046F4D4 /* Foundation */,
-				CED3DFEA2922701D0046F4D4 /* Model */,
+				CED3DFEA2922701D0046F4D4 /* Dto */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -191,29 +201,34 @@
 				CEA59AD12923679600675429 /* UILabel+.swift */,
 				CEA59AD3292367DF00675429 /* UITextField+.swift */,
 				CEA59AD52923680E00675429 /* UIView+.swift */,
+				CEC74444292A7DE700C8D56D /* Encodable+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		CED3DFEA2922701D0046F4D4 /* Model */ = {
+		CED3DFEA2922701D0046F4D4 /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				CEC7444C292A7F6F00C8D56D /* TrailLocationResponseDto.swift */,
 			);
-			path = Model;
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		CED3DFEB292270220046F4D4 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				CEC74446292A7DFF00C8D56D /* NetworkLoggerPlugin.swift */,
+				CEC74448292A7E2100C8D56D /* APIConstants.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		CED3DFEC292270370046F4D4 /* APIService */ = {
+		CED3DFEC292270370046F4D4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				CEC7444A292A7E7200C8D56D /* TrailRouter.swift */,
 			);
-			path = APIService;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CED3DFED292271230046F4D4 /* TicketConfirmationScene */ = {
@@ -356,15 +371,20 @@
 				CEAF53C429228005005BAB29 /* FontLiterals.swift in Sources */,
 				CEA59AD22923679600675429 /* UILabel+.swift in Sources */,
 				CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */,
+				CEC7444D292A7F6F00C8D56D /* TrailLocationResponseDto.swift in Sources */,
+				CEC74449292A7E2100C8D56D /* APIConstants.swift in Sources */,
 				CEA59ADA2923687C00675429 /* ApplyShadow.swift in Sources */,
 				CEA59AD62923680E00675429 /* UIView+.swift in Sources */,
 				CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */,
+				CEC74447292A7DFF00C8D56D /* NetworkLoggerPlugin.swift in Sources */,
 				CEAF53BC29227D1F005BAB29 /* ColorLiterals.swift in Sources */,
+				CEC7444B292A7E7200C8D56D /* TrailRouter.swift in Sources */,
 				CEA59AD4292367DF00675429 /* UITextField+.swift in Sources */,
 				CEA59AD82923686100675429 /* Adjusted+.swift in Sources */,
 				CEA59ADC292368A600675429 /* getClassName.swift in Sources */,
 				CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
+				CEC74445292A7DE700C8D56D /* Encodable+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
