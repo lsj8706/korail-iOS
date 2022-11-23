@@ -30,9 +30,15 @@ class TrainInquiryViewCell: UITableViewCell {
         $0.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
     }
 
-    private let standardRoomInfoLabel = UILabel().then {
-        $0.textColor = .korailPrimaryColor
-        $0.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
+    private let standardRoomInfoButton = UIButton(type: .system).then {
+        $0.setTitle(".", for: .normal)
+//        $0.titleLabel?.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
+//        $0.setTitleColor(UIColor.white, for: .selected)
+//        $0.setTitleColor(UIColor.korailPrimaryColor, for: .normal)
+//
+//        $0.layer.cornerRadius = 20
+//        $0.layer.borderWidth = 1
+//        $0.layer.borderColor = UIColor.korailPrimaryColor
     }
     
     private let suiteRoomInfoLabel = UILabel().then {
@@ -58,10 +64,9 @@ extension TrainInquiryViewCell {
             trainLabel,
             departureLabel,
             arrivalLabel,
-            standardRoomInfoLabel,
+            standardRoomInfoButton,
             suiteRoomInfoLabel
         )
-        
         
         infoContainerView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
@@ -90,9 +95,11 @@ extension TrainInquiryViewCell {
             $0.centerX.equalTo(contentView.snp.trailing).offset(-45)
         }
         
-        standardRoomInfoLabel.snp.makeConstraints {
+        standardRoomInfoButton.snp.makeConstraints {
             $0.top.equalToSuperview().offset(25)
             $0.centerX.equalTo(contentView.snp.trailing).offset(-124)
+            $0.width.equalTo(70)
+            $0.height.equalTo(36)
         }
     }
     
@@ -101,6 +108,6 @@ extension TrainInquiryViewCell {
         departureLabel.text = model.departure
         arrivalLabel.text = model.arrival
         suiteRoomInfoLabel.text = model.suiteRoomInfo
-        standardRoomInfoLabel.text = model.standardRoomInfo
+//        standardRoomInfoButton.text = model.standardRoomInfo
     }
 }

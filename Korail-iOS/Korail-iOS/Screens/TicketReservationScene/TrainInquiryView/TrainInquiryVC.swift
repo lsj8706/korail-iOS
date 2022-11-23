@@ -164,8 +164,6 @@ class TrainInquiryVC: UIViewController {
         register()
     }
     
-    
-
 
 }
 
