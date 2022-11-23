@@ -8,8 +8,13 @@
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 final class LocationFormVC: UIViewController {
+    
+    // MARK: - Properties
+    
+    private let trailProvider = MoyaProvider<TrailRouter>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     // MARK: - UI Components
     
@@ -205,6 +210,7 @@ final class LocationFormVC: UIViewController {
         setUI()
         setLayout()
         setAction()
+        getTrailLocationData()
     }
 }
 
@@ -282,6 +288,14 @@ extension LocationFormVC {
         })
     }
     
+    private func setData(data: TrailLocationResponseData) {
+        departureCityButton.titleLabel?.text = data.departures
+        arrivalCityButton.titleLabel?.text = data.arrivals
+        departureDateButton.titleLabel?.text = data.startDate
+        arrivalDateButton.titleLabel?.text = data.lastDate
+        numberOfPeopleButton.titleLabel?.text = "성인 \(data.personnel)명"
+    }
+    
     // MARK: - @objc Function
     
     @objc private func ticketScheduleButtonDidTap(sender: UIButton) {
@@ -301,3 +315,32 @@ extension LocationFormVC {
     }
 }
 
+
+// MARK: - Network
+
+extension LocationFormVC {
+    private func getTrailLocationData() {
+        trailProvider.request(.getTrailLocation) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if status >= 200 && status < 300 {
+                    do {
+                        let responseDto = try result.map(TrailLocationResponseDto.self)
+                        self.setData(data: responseDto.data[0])
+                    }
+                    catch(let error) {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("400 error")
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
