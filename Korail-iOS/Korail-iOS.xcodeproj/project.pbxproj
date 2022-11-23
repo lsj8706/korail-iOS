@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67897440292E620A007E2433 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6789743F292E620A007E2433 /* InfoModel.swift */; };
+		67897442292E6226007E2433 /* PeopleInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67897441292E6226007E2433 /* PeopleInfoTableViewCell.swift */; };
+		67897444292E6263007E2433 /* InfoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67897443292E6263007E2433 /* InfoFormVC.swift */; };
 		CEA59AD22923679600675429 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD12923679600675429 /* UILabel+.swift */; };
 		CEA59AD4292367DF00675429 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD3292367DF00675429 /* UITextField+.swift */; };
 		CEA59AD62923680E00675429 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD52923680E00675429 /* UIView+.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6789743F292E620A007E2433 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		67897441292E6226007E2433 /* PeopleInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewCell.swift; sourceTree = "<group>"; };
+		67897443292E6263007E2433 /* InfoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoFormVC.swift; sourceTree = "<group>"; };
 		CEA59AD12923679600675429 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CEA59AD3292367DF00675429 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		CEA59AD52923680E00675429 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 		CED3DFF0292271ED0046F4D4 /* InfoFormView */ = {
 			isa = PBXGroup;
 			children = (
+				6789743F292E620A007E2433 /* InfoModel.swift */,
+				67897441292E6226007E2433 /* PeopleInfoTableViewCell.swift */,
+				67897443292E6263007E2433 /* InfoFormVC.swift */,
 			);
 			path = InfoFormView;
 			sourceTree = "<group>";
@@ -371,9 +380,11 @@
 				CEAF53C429228005005BAB29 /* FontLiterals.swift in Sources */,
 				CEA59AD22923679600675429 /* UILabel+.swift in Sources */,
 				CED3DFCE29226BDE0046F4D4 /* AppDelegate.swift in Sources */,
+				67897442292E6226007E2433 /* PeopleInfoTableViewCell.swift in Sources */,
 				CEC7444D292A7F6F00C8D56D /* TrailLocationResponseDto.swift in Sources */,
 				CEC74449292A7E2100C8D56D /* APIConstants.swift in Sources */,
 				CEA59ADA2923687C00675429 /* ApplyShadow.swift in Sources */,
+				67897444292E6263007E2433 /* InfoFormVC.swift in Sources */,
 				CEA59AD62923680E00675429 /* UIView+.swift in Sources */,
 				CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */,
 				CEC74447292A7DFF00C8D56D /* NetworkLoggerPlugin.swift in Sources */,
@@ -383,6 +394,7 @@
 				CEA59AD82923686100675429 /* Adjusted+.swift in Sources */,
 				CEA59ADC292368A600675429 /* getClassName.swift in Sources */,
 				CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */,
+				67897440292E620A007E2433 /* InfoModel.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
 				CEC74445292A7DE700C8D56D /* Encodable+.swift in Sources */,
 			);
