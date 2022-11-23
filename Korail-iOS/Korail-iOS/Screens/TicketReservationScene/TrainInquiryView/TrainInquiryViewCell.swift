@@ -62,6 +62,7 @@ extension TrainInquiryViewCell {
             suiteRoomInfoLabel
         )
         
+        
         infoContainerView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview()

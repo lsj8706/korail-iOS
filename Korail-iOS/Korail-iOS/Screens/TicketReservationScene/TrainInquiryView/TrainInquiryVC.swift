@@ -17,6 +17,8 @@ class TrainInquiryVC: UIViewController {
         $0.layer.applyShadow(alpha: 0.1, x: 0, y: 0, blur: 8)
     }
     
+    private var selectedIndex: IndexPath?
+    
     private let departArrivalView = UIView()
     private let topView = UIView()
     private let middleView = UIView()
@@ -151,6 +153,8 @@ class TrainInquiryVC: UIViewController {
         TrainInquiryModel(train: "무1505", departure: "09:10", arrival: "10:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "11,800₩")
     ]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -159,11 +163,11 @@ class TrainInquiryVC: UIViewController {
         setNavigationBar()
         register()
     }
+    
+    
 
 
 }
-
-
 
 
 extension TrainInquiryVC {
@@ -194,7 +198,7 @@ extension TrainInquiryVC {
             bottomView
         )
         
-        topView.backgroundColor = .red
+        //topView.backgroundColor = .red
         
         departArrivalView.snp.makeConstraints {
             $0.top.equalTo(contentView.snp.top).offset(22)
@@ -255,7 +259,7 @@ extension TrainInquiryVC {
             $0.height.equalTo(11.29)
         }
         
-        middleView.backgroundColor = .orange
+        //middleView.backgroundColor = .orange
         
         middleView.addSubviews(
             selectOptionButton1,
@@ -290,7 +294,7 @@ extension TrainInquiryVC {
             $0.width.equalTo(83)
         }
         
-        trainInquiryIndexView.backgroundColor = .yellow
+        //trainInquiryIndexView.backgroundColor = .yellow
         
         trainInquiryIndexView.addSubviews(
             trainIndexLabel,
@@ -331,7 +335,7 @@ extension TrainInquiryVC {
             $0.trailing.equalTo(suiteRoomInfoIndexLabel.snp.leading).offset(-43)
         }
         
-        bottomView.backgroundColor = .green
+        //bottomView.backgroundColor = .green
         
         bottomView.addSubview(trainInquiryTableView)
         
@@ -352,6 +356,8 @@ extension TrainInquiryVC {
         trainInquiryTableView.register(TrainInquiryViewCell.self, forCellReuseIdentifier: TrainInquiryViewCell.identifier)
     }
     
+    
+    
 }
 
 extension TrainInquiryVC: UITableViewDelegate {
@@ -368,10 +374,27 @@ extension TrainInquiryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let trainInquiryCell = tableView.dequeueReusableCell(withIdentifier: TrainInquiryViewCell.identifier, for: indexPath)
                 as? TrainInquiryViewCell else {return UITableViewCell()}
+        trainInquiryCell.selectionStyle = .none
         trainInquiryCell.dataBind(model: trainInquiryList[indexPath.row])
         return trainInquiryCell
         
     }
+}
+
+extension TrainInquiryVC {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as! TrainInquiryViewCell
+        
+        if let selectedIndex = selectedIndex {
+            let previousCell = tableView.cellForRow(at: selectedIndex)
+            
+            previousCell?.backgroundColor = .white
+
+        }
+
+        selectedIndex = indexPath
+        selectedCell.backgroundColor = .korailGray1
+    }
     
 }
