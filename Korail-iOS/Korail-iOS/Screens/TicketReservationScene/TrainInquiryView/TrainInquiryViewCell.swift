@@ -32,18 +32,24 @@ class TrainInquiryViewCell: UITableViewCell {
 
     private let standardRoomInfoButton = UIButton(type: .system).then {
         $0.setTitle(".", for: .normal)
-//        $0.titleLabel?.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
-//        $0.setTitleColor(UIColor.white, for: .selected)
-//        $0.setTitleColor(UIColor.korailPrimaryColor, for: .normal)
-//
-//        $0.layer.cornerRadius = 20
-//        $0.layer.borderWidth = 1
-//        $0.layer.borderColor = UIColor.korailPrimaryColor
+        $0.titleLabel?.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
+        $0.setTitleColor(UIColor.white, for: .selected)
+        $0.setTitleColor(UIColor.korailPrimaryColor, for: .normal)
+
+        $0.layer.cornerRadius = 18
+        $0.layer.borderWidth = 0.5
+        $0.layer.borderColor = UIColor.korailPrimaryColor.cgColor
     }
     
-    private let suiteRoomInfoLabel = UILabel().then {
-        $0.textColor = .korailPrimaryColor
-        $0.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
+    private let suiteRoomInfoButton = UIButton(type: .system).then {
+        $0.setTitle(".", for: .normal)
+        $0.titleLabel?.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
+        $0.setTitleColor(UIColor.white, for: .selected)
+        $0.setTitleColor(UIColor.korailPrimaryColor, for: .normal)
+
+        $0.layer.cornerRadius = 18
+        $0.layer.borderWidth = 0.5
+        $0.layer.borderColor = UIColor.korailPrimaryColor.cgColor
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
@@ -65,7 +71,7 @@ extension TrainInquiryViewCell {
             departureLabel,
             arrivalLabel,
             standardRoomInfoButton,
-            suiteRoomInfoLabel
+            suiteRoomInfoButton
         )
         
         infoContainerView.snp.makeConstraints {
@@ -90,13 +96,15 @@ extension TrainInquiryViewCell {
             $0.centerX.equalTo(contentView.snp.leading).offset(162.5)
         }
         
-        suiteRoomInfoLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(25)
+        suiteRoomInfoButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(15)
             $0.centerX.equalTo(contentView.snp.trailing).offset(-45)
+            $0.width.equalTo(70)
+            $0.height.equalTo(36)
         }
         
         standardRoomInfoButton.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(25)
+            $0.top.equalToSuperview().offset(15)
             $0.centerX.equalTo(contentView.snp.trailing).offset(-124)
             $0.width.equalTo(70)
             $0.height.equalTo(36)
@@ -107,7 +115,7 @@ extension TrainInquiryViewCell {
         trainLabel.text = model.train
         departureLabel.text = model.departure
         arrivalLabel.text = model.arrival
-        suiteRoomInfoLabel.text = model.suiteRoomInfo
-//        standardRoomInfoButton.text = model.standardRoomInfo
+        suiteRoomInfoButton.setTitle(model.suiteRoomInfo, for: .normal)
+        standardRoomInfoButton.setTitle(model.standardRoomInfo, for: .normal)
     }
 }
