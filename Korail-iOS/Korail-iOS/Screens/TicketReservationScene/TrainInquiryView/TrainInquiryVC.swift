@@ -384,10 +384,11 @@ extension TrainInquiryVC {
         let selectedCell = tableView.cellForRow(at: indexPath) as! TrainInquiryViewCell
         
         if let selectedIndex = selectedIndex {
-            let previousCell = tableView.cellForRow(at: selectedIndex)
+            let previousCell = tableView.cellForRow(at: selectedIndex) as! TrainInquiryViewCell
             
-            previousCell?.backgroundColor = .white
-
+            previousCell.backgroundColor = .white
+            
+            previousCell.deselectedButtonColor()
         }
 
         // 매진일 경우, 함수를 빠져나오게 만듦
@@ -399,7 +400,6 @@ extension TrainInquiryVC {
         selectedCell.backgroundColor = .korailGray1
         
         selectedCell.selectedButtonColor()
-        
         
     }
 
