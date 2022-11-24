@@ -12,7 +12,7 @@ struct InfoModel {
     let infoName : String
     let infoDescription : String
     let plusDescription : String
-    let btnMius : String
+    let btnMinus : String
     let peopleNum : String
     let btnPlus : String
 
