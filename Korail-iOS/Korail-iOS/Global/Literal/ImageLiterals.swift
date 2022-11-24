@@ -10,6 +10,7 @@ import UIKit
 enum ImageLiterals {
     static var icArrow: UIImage { .load(named: "ic_arrow") }
     static var icBigLeft: UIImage { .load(named: "ic_bigleft") }
+    static var icBigRight: UIImage { .load(named: "ic_bigright") }
     static var icCalendar: UIImage { .load(named: "ic_calendar") }
     static var icChange: UIImage { .load(named: "ic_change") }
     static var icCheck: UIImage { .load(named: "ic_check") }
