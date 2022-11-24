@@ -387,7 +387,6 @@ extension TrainInquiryVC {
             let previousCell = tableView.cellForRow(at: selectedIndex) as! TrainInquiryViewCell
             
             previousCell.backgroundColor = .white
-            
             previousCell.deselectedButtonColor()
         }
 
