@@ -391,8 +391,14 @@ extension TrainInquiryVC {
 
         }
 
+        // 매진일 경우, 함수를 빠져나오게 만듦
+        if (trainInquiryList[indexPath.row].standardRoomInfo == "매진") {
+            return
+        }
+        
         selectedIndex = indexPath
         selectedCell.backgroundColor = .korailGray1
+        
     }
-    
+
 }

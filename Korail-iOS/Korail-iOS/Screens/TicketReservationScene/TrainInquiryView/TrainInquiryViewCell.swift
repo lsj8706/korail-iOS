@@ -10,9 +10,11 @@ import SnapKit
 import Then
 
 class TrainInquiryViewCell: UITableViewCell {
-
-    static let identifier = "TrainInquiryViewCell"
     
+
+    
+    static let identifier = "TrainInquiryViewCell"
+        
     private let infoContainerView = UIView()
     
     private let trainLabel = UILabel().then {
@@ -35,10 +37,12 @@ class TrainInquiryViewCell: UITableViewCell {
         $0.titleLabel?.font = UIFont.font(.pretendardSemiBold, ofSize: 14)
         $0.setTitleColor(UIColor.white, for: .selected)
         $0.setTitleColor(UIColor.korailPrimaryColor, for: .normal)
-
+        
         $0.layer.cornerRadius = 18
         $0.layer.borderWidth = 0.5
         $0.layer.borderColor = UIColor.korailPrimaryColor.cgColor
+
+        
     }
     
     private let suiteRoomInfoButton = UIButton(type: .system).then {
@@ -117,5 +121,22 @@ extension TrainInquiryViewCell {
         arrivalLabel.text = model.arrival
         suiteRoomInfoButton.setTitle(model.suiteRoomInfo, for: .normal)
         standardRoomInfoButton.setTitle(model.standardRoomInfo, for: .normal)
+        
+        if (model.standardRoomInfo == "매진") {
+            trainLabel.textColor = .korailGray2
+            departureLabel.textColor = .korailGray2
+            arrivalLabel.textColor = .korailGray2
+            
+            standardRoomInfoButton.setTitleColor(UIColor.korailGray2, for: .normal)
+            standardRoomInfoButton.layer.borderColor = UIColor.korailGray2.cgColor
+            standardRoomInfoButton.isEnabled = false
+        }
+        
+        if (model.suiteRoomInfo == "-") {
+            suiteRoomInfoButton.layer.borderColor = UIColor.clear.cgColor
+            suiteRoomInfoButton.setTitleColor(UIColor.korailGray2, for: .normal)
+            suiteRoomInfoButton.isEnabled = false
+        }
     }
+    
 }
