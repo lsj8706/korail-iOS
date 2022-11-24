@@ -142,18 +142,24 @@ extension TrainInquiryViewCell {
         
     }
     
-    func changeButtonColor() {
+    func selectedButtonColor() {
         
         self.standardRoomInfoButton.backgroundColor = .korailPrimaryColor
         self.standardRoomInfoButton.setTitleColor(.white, for: .normal)
         
         if checkDummy == 1 {
-            checkDummy = 0
             return
         } else {
             self.suiteRoomInfoButton.backgroundColor = .korailPrimaryColor
             self.suiteRoomInfoButton.setTitleColor(.white, for: .normal)
         }
+        
+    }
+    
+    func deselectdeButtonColor() {
+        self.standardRoomInfoButton.backgroundColor = .korailPrimaryColor
+        self.standardRoomInfoButton.setTitleColor(.white, for: .normal)
+        
         
     }
     

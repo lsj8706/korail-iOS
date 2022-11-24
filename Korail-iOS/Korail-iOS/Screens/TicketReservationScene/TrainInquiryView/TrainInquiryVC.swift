@@ -398,8 +398,8 @@ extension TrainInquiryVC {
         selectedIndex = indexPath
         selectedCell.backgroundColor = .korailGray1
         
-        selectedCell.changeButtonColor()
-       
+        selectedCell.selectedButtonColor()
+        
         
     }
 
