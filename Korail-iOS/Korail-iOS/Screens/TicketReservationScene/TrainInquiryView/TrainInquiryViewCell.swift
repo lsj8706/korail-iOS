@@ -12,7 +12,7 @@ import Then
 class TrainInquiryViewCell: UITableViewCell {
     
 
-    
+    public var checkDummy : Int = 0
     static let identifier = "TrainInquiryViewCell"
         
     private let infoContainerView = UIView()
@@ -136,7 +136,25 @@ extension TrainInquiryViewCell {
             suiteRoomInfoButton.layer.borderColor = UIColor.clear.cgColor
             suiteRoomInfoButton.setTitleColor(UIColor.korailGray2, for: .normal)
             suiteRoomInfoButton.isEnabled = false
+            checkDummy = 1
         }
+        
+        
+    }
+    
+    func changeButtonColor() {
+        
+        self.standardRoomInfoButton.backgroundColor = .korailPrimaryColor
+        self.standardRoomInfoButton.setTitleColor(.white, for: .normal)
+        
+        if checkDummy == 1 {
+            checkDummy = 0
+            return
+        } else {
+            self.suiteRoomInfoButton.backgroundColor = .korailPrimaryColor
+            self.suiteRoomInfoButton.setTitleColor(.white, for: .normal)
+        }
+        
     }
     
 }

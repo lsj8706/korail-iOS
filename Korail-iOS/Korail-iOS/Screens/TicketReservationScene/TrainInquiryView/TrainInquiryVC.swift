@@ -149,8 +149,7 @@ class TrainInquiryVC: UIViewController {
         TrainInquiryModel(train: "무1316", departure: "06:57", arrival: "08:31", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
         TrainInquiryModel(train: "무1318", departure: "07:10", arrival: "08:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "-"),
         TrainInquiryModel(train: "무1442", departure: "07:40", arrival: "09:20", standardRoomInfo: "매진", suiteRoomInfo: "-"),
-        TrainInquiryModel(train: "무1318", departure: "08:32", arrival: "09:58", standardRoomInfo: "매진", suiteRoomInfo: "-"),
-        TrainInquiryModel(train: "무1505", departure: "09:10", arrival: "10:40", standardRoomInfo: "7,800₩", suiteRoomInfo: "11,800₩")
+        TrainInquiryModel(train: "무1318", departure: "08:32", arrival: "09:58", standardRoomInfo: "매진", suiteRoomInfo: "-")
     ]
     
     
@@ -398,6 +397,9 @@ extension TrainInquiryVC {
         
         selectedIndex = indexPath
         selectedCell.backgroundColor = .korailGray1
+        
+        selectedCell.changeButtonColor()
+       
         
     }
 
