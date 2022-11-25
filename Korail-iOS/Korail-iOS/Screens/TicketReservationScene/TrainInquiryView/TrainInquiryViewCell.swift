@@ -12,7 +12,7 @@ import Then
 class TrainInquiryViewCell: UITableViewCell {
     
 
-    public var checkDummy : Int = 0
+    public var checkDummy: Int = 0
     static let identifier = "TrainInquiryViewCell"
         
     private let infoContainerView = UIView()
@@ -41,8 +41,6 @@ class TrainInquiryViewCell: UITableViewCell {
         $0.layer.cornerRadius = 18
         $0.layer.borderWidth = 0.5
         $0.layer.borderColor = UIColor.korailPrimaryColor.cgColor
-
-        
     }
     
     private let suiteRoomInfoButton = UIButton(type: .system).then {
@@ -169,5 +167,15 @@ extension TrainInquiryViewCell {
         }
         
     }
+    
+    private func setData(data: TrailInquiryResponseData) {
+        trainLabel.text = data.trainName
+        departureLabel.text = data.startTime
+        arrivalLabel.text = data.lastTime
+        standardRoomInfoButton.titleLabel?.text = "\(data.normalPrice)₩"
+        suiteRoomInfoButton.titleLabel?.text =
+        "\(data.specialPrice)₩"
+    }
 
 }
+
