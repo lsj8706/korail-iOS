@@ -169,5 +169,15 @@ extension TrainInquiryViewCell {
         }
         
     }
+    
+    private func setData(data: TrailInquiryResponseData) {
+        trainLabel.text = data.trainName
+        departureLabel.text = data.startTime
+        arrivalLabel.text = data.lastTime
+        standardRoomInfoButton.titleLabel?.text = "\(data.normalPrice)₩"
+        suiteRoomInfoButton.titleLabel?.text =
+        "\(data.specialPrice)₩"
+    }
 
 }
+

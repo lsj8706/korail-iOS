@@ -8,8 +8,11 @@
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 class TrainInquiryVC: UIViewController {
+    
+    private let trailProvider = MoyaProvider<TrailRouter>(plugins: [NetworkLoggerPlugin(verbose: true)])
 
     private let contentView = UIView().then {
         $0.backgroundColor = .white
@@ -401,5 +404,7 @@ extension TrainInquiryVC {
         selectedCell.selectedButtonColor()
         
     }
+    
+    
 
 }

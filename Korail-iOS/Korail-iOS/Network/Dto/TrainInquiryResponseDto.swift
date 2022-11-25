@@ -16,7 +16,7 @@ struct TrailInquiryResponseDto: Codable {
 struct TrailInquiryResponseData: Codable {
     let id: Int
     let departures, arrivals, startDate, trainName, startTime, lastTime: String
-    let trainInformation: Array<Any>
+    let trainInformation: [String]
     let normalPrice: Int
     let specialPrice: Int
     
