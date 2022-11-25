@@ -131,12 +131,12 @@ class InfoFormVC: UIViewController {
     
     
     var infoList: [InfoModel] = [
-        InfoModel(infoName: "어른", infoDescription: "만 13세 이상",plusDescription:"",  btnMinus: "", peopleNum: "1", btnPlus: "ic_plus"),
-        InfoModel(infoName: "어린이", infoDescription: "만 6~12세", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: "ic_plus"),
-        InfoModel(infoName: "유아", infoDescription: "만 6세 미만", plusDescription:"", btnMinus: "", peopleNum: "1", btnPlus: "ic_plus"),
-        InfoModel(infoName: "경로", infoDescription: "만 65세 이상",plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: "ic_plus"),
-        InfoModel(infoName: "중증장애인", infoDescription: "", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: "ic_plus"),
-        InfoModel(infoName: "경증장애인", infoDescription: "", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: "ic_plus")
+        InfoModel(infoName: "어른", infoDescription: "만 13세 이상",plusDescription:"",  btnMinus: "", peopleNum: "1", btnPlus: ""),
+        InfoModel(infoName: "어린이", infoDescription: "만 6~12세", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: ""),
+        InfoModel(infoName: "유아", infoDescription: "만 6세 미만", plusDescription:"", btnMinus: "", peopleNum: "1", btnPlus: ""),
+        InfoModel(infoName: "경로", infoDescription: "만 65세 이상",plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: ""),
+        InfoModel(infoName: "중증장애인", infoDescription: "", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: ""),
+        InfoModel(infoName: "경증장애인", infoDescription: "", plusDescription:"", btnMinus: "", peopleNum: "0", btnPlus: "")
 
 ]
 
