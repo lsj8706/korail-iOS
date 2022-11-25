@@ -118,7 +118,7 @@ final class LocationFormVC: UIViewController {
         $0.spacing = 40
     }
     
-    private let departureDateButton = UIButton().then {
+    private lazy var departureDateButton = UIButton(type: .system).then {
         var config = UIButton.Configuration.filled()
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 16)
@@ -182,7 +182,7 @@ final class LocationFormVC: UIViewController {
         $0.distribution = .fillEqually
     }
     
-    private let trainSearchButton = UIButton().then {
+    private lazy var trainSearchButton = UIButton().then {
         var config = UIButton.Configuration.filled()
         var container = AttributeContainer()
         container.font = UIFont.font(.pretendardMedium, ofSize: 20)
@@ -311,8 +311,8 @@ extension LocationFormVC {
     private func setData(data: TrailLocationResponseData) {
         departureCityButton.titleLabel?.text = data.departures
         arrivalCityButton.titleLabel?.text = data.arrivals
-        departureDateButton.titleLabel?.text = data.startDate
-        arrivalDateButton.titleLabel?.text = data.lastDate
+        departureDateButton.setTitle(data.startDate, for: .normal)
+        arrivalDateButton.setTitle(data.lastDate, for: .normal)
         numberOfPeopleButton.titleLabel?.text = "성인 \(data.personnel)명"
     }
     

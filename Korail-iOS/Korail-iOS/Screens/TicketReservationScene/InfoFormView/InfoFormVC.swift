@@ -62,14 +62,12 @@ class InfoFormVC: UIViewController {
     
     
     
-    private let backButton = UIButton().then{
+    private lazy var backButton = UIButton().then{
         $0.setTitle("적용", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .systemBlue
         $0.layer.cornerRadius = 10
         $0.addTarget(self, action: #selector(closeButton), for: .touchUpInside)
-
-
     }
     
     
