@@ -14,11 +14,6 @@ import Then
 
 class PeopleInfoTableViewCell: UITableViewCell {
 
-//    let infoName : String
-//    let infoDescription : String
-//    let btnMinus : String
-//    let peopleNum : String
-//    let btnPlus : String
 
     
     static let identifier = "PeopleInfoTableViewCell"
@@ -47,14 +42,13 @@ class PeopleInfoTableViewCell: UITableViewCell {
     
     private let plusDescription = UIButton().then{
         $0.layer.cornerRadius = 17
-        $0.setBackgroundImage(UIImage(systemName: "ic_plus"), for: .normal)
 
     }
 
     private let btnPlus = UIButton().then{
         $0.layer.cornerRadius = 17
-        $0.setBackgroundImage(UIImage(systemName: "ic_plus"), for: .normal)
-        
+        $0.setImage(UIImage(named: "ic_plus"), for: .normal)
+
     }
     
     private let peopleNum = UILabel().then{
@@ -65,29 +59,17 @@ class PeopleInfoTableViewCell: UITableViewCell {
     
     private let btnMinus = UIButton().then {
         $0.layer.cornerRadius = 17
-        $0.setBackgroundImage(UIImage(systemName: "ic_minus"), for: .normal)
+        $0.setImage(UIImage(named: "ic_minus"), for: .normal)
 
     }
     
     
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(btnPlus)
-        addSubview(btnMinus)
-
-
-        layout()
         
-        let stackView = UIStackView(arrangedSubviews: [btnMinus,btnPlus])
-         stackView.distribution = .equalSpacing
-         stackView.axis = .horizontal
-         stackView.spacing = 5
-         addSubview(stackView)
-         
-         }
-    
+        layout()
 
+         }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -104,7 +86,7 @@ extension PeopleInfoTableViewCell{
         contentView.backgroundColor = .clear
         
         
-        [topContainerView, infoName, infoDescription, btnPlus, peopleNum, btnMinus].forEach {
+        [topContainerView, infoName, infoDescription, plusDescription, btnPlus, peopleNum, btnMinus].forEach {
             contentView.addSubview($0)
         }
         
@@ -114,40 +96,41 @@ extension PeopleInfoTableViewCell{
         
         infoName.snp.makeConstraints {
             $0.top.equalToSuperview().offset(15)
-            $0.leading.equalToSuperview().offset(41)
+            $0.leading.equalToSuperview().offset(21)
             $0.width.equalTo(80)
             $0.height.equalTo(12)
         }
         
         infoDescription.snp.makeConstraints{
-            $0.leading.equalToSuperview().offset(41)
+            $0.leading.equalToSuperview().offset(21)
             $0.top.equalTo(infoName.snp.bottom).offset(5)
         }
         
 
         
-//        plusDescription.snp.makeConstraints{
-//            $0.leading.equalTo(infoName.snp.leading).offset(11)
-//            $0.top.equalToSuperview().offset(29)
-//        }
+        plusDescription.snp.makeConstraints{
+            $0.leading.equalTo(infoName.snp.leading).offset(30)
+            $0.top.equalToSuperview().offset(3)
+        }
         
         
         
         btnMinus.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(29)
-            $0.leading.equalToSuperview().offset(230)
+            $0.top.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().offset(273)
+
         }
         
         peopleNum.snp.makeConstraints{
             $0.top.equalToSuperview().offset(15)
-            $0.leading.equalToSuperview().offset(330)
+            $0.leading.equalToSuperview().offset(300)
             $0.width.equalTo(50)
 
         }
         
         btnPlus.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(29)
-            $0.leading.equalToSuperview().offset(315)
+            $0.top.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().offset(313)
 
         }
         
@@ -156,19 +139,12 @@ extension PeopleInfoTableViewCell{
     
     func dataBind(model: InfoModel){
         
-//        let infoName : String
-//        let infoDescription : String
-//        let plusDescription : String
-//        let btnMius : String
-//        let peopleNum : String
-//        let btnPlus : String'
-        
         infoName.text = model.infoName
         infoDescription.text = model.infoDescription
-      //  btnMinus.button = UIButton(type: model.btnMinus)
+        btnMinus.setTitle(model.btnMinus, for: .normal)
+        plusDescription.setTitle(model.plusDescription, for: .normal)
         peopleNum.text = model.peopleNum
-        //btnPlus.button = UIButton(type: model.btnPlus)
-
+        btnPlus.setTitle(model.btnPlus, for: .normal)
 
     }
     
