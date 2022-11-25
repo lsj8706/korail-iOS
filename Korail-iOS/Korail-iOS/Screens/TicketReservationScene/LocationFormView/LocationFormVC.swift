@@ -128,6 +128,7 @@ final class LocationFormVC: UIViewController {
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 9
         $0.configuration = config
+        $0.addTarget(self, action: #selector(touchupDepartureDateButton), for: .touchUpInside)
     }
     
     private let arrivalDateButton = UIButton().then {
@@ -170,6 +171,7 @@ final class LocationFormVC: UIViewController {
         config.baseForegroundColor = .korailGray2
         config.imagePadding = 9
         $0.configuration = config
+        
     }
     
     private lazy var ticketInfoFormStackView = UIStackView(
@@ -212,6 +214,24 @@ final class LocationFormVC: UIViewController {
         setAction()
         getTrailLocationData()
     }
+    
+    
+    
+    
+    private func presentToInfoVC(){
+        let InfoVC = InfoFormVC()
+        InfoVC.modalPresentationStyle = .formSheet
+        self.present(InfoVC,animated: true,completion: nil)
+    }
+    
+    // MARK: - objc touchupSignUpButton func
+    @objc
+    private func touchupDepartureDateButton(){
+        presentToInfoVC()
+    }
+
+    
+    
 }
 
 // MARK: - Methods
