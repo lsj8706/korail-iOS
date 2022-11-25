@@ -90,42 +90,13 @@ class InfoFormVC: UIViewController {
         
         setlayout()
         register()
+        setCalendarView()
     }
     
     
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        calendarView.frame = CGRect(x: 20, y:112, width: 350, height: 296)
-        view.addSubview(calendarView)
-        calendarView.clipsToBounds = true
-        calendarView.layer.cornerRadius = calendarView.frame.width/30
-        
-        
-        
-        calendarView.placeholderType = .none
-        calendarView.scrollEnabled = false
-        calendarView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        calendarView.appearance.selectionColor = UIColor(red: 38/255, green: 153/255, blue: 251/255, alpha: 1)
-        calendarView.appearance.todayColor = UIColor(red: 198/255, green: 224/255, blue: 253/255, alpha: 1)
-        
-        calendarView.appearance.headerTitleFont = UIFont(name: "Pretendard-Medium", size: 15)
-        calendarView.appearance.weekdayFont = UIFont(name: "Pretendard-Regular", size: 13)
-        calendarView.appearance.titleFont = UIFont(name: "Pretendard-Regular", size: 13)
-        
-        calendarView.firstWeekday = 2
-
-        calendarView.appearance.headerDateFormat = "< M월 >"
-        calendarView.appearance.headerTitleColor = .black
-
-        
-        calendarView.appearance.weekdayTextColor = .black
-        
-        calendarView.calendarWeekdayView.weekdayLabels.last!.textColor = .red
-    
-        infoTableView.clipsToBounds = true
-        infoTableView.layer.cornerRadius = infoTableView.frame.width/30
-
     }
 
     
@@ -211,6 +182,38 @@ extension InfoFormVC {
         infoTableView.register(PeopleInfoTableViewCell.self, forCellReuseIdentifier: PeopleInfoTableViewCell.identifier)
         
     }
+    
+    private func setCalendarView() {
+        calendarView.frame = CGRect(x: 20, y:112, width: 350, height: 296)
+        view.addSubview(calendarView)
+        calendarView.clipsToBounds = true
+        calendarView.layer.cornerRadius = calendarView.frame.width/30
+        
+        
+        
+        calendarView.placeholderType = .none
+        calendarView.scrollEnabled = false
+        calendarView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        calendarView.appearance.selectionColor = UIColor(red: 38/255, green: 153/255, blue: 251/255, alpha: 1)
+        calendarView.appearance.todayColor = .white
+        
+        calendarView.appearance.headerTitleFont = UIFont(name: "Pretendard-Medium", size: 15)
+        calendarView.appearance.weekdayFont = UIFont(name: "Pretendard-Regular", size: 13)
+        calendarView.appearance.titleFont = UIFont(name: "Pretendard-Regular", size: 13)
+        calendarView.appearance.subtitleTodayColor = .korailPrimaryColor
+        calendarView.firstWeekday = 2
+
+        calendarView.appearance.headerDateFormat = "< M월 >"
+        calendarView.appearance.headerTitleColor = .black
+
+        
+        calendarView.appearance.weekdayTextColor = .black
+        
+        calendarView.calendarWeekdayView.weekdayLabels.last!.textColor = .red
+    
+        infoTableView.clipsToBounds = true
+        infoTableView.layer.cornerRadius = infoTableView.frame.width/30
+    }
 }
 
 
@@ -243,14 +246,20 @@ extension InfoFormVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelega
     }
     
     
-    //날짜 밑에 문자열을 표시
+    // 오늘 cell에 subtitle 생성
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
         let dateFormatter = DateFormatter()
-        switch dateFormatter.string(from: date){
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(abbreviation: "KST")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        switch dateFormatter.string(from: date) {
         case dateFormatter.string(from: Date()):
             return "오늘"
+            
         default:
             return nil
+            
         }
     }
     
