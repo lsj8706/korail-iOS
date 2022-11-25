@@ -21,14 +21,12 @@ class TrainInquiryVC: UIViewController {
     }
     
     private var selectedIndex: IndexPath?
-    
     private let departArrivalView = UIView()
     private let topView = UIView()
     private let middleView = UIView()
     private let trainInquiryIndexView = UIView()
     private let bottomView = UIView()
 
-    
     private let departureLabel = UILabel().then {
         $0.text = "서울"
         $0.textColor = .black
@@ -155,8 +153,6 @@ class TrainInquiryVC: UIViewController {
         TrainInquiryModel(train: "무1318", departure: "08:32", arrival: "09:58", standardRoomInfo: "매진", suiteRoomInfo: "-")
     ]
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -165,8 +161,6 @@ class TrainInquiryVC: UIViewController {
         setNavigationBar()
         register()
     }
-    
-
 }
 
 
@@ -355,9 +349,6 @@ extension TrainInquiryVC {
     private func register() {
         trainInquiryTableView.register(TrainInquiryViewCell.self, forCellReuseIdentifier: TrainInquiryViewCell.identifier)
     }
-    
-    
-    
 }
 
 extension TrainInquiryVC: UITableViewDelegate {
@@ -377,7 +368,6 @@ extension TrainInquiryVC: UITableViewDataSource {
         trainInquiryCell.selectionStyle = .none
         trainInquiryCell.dataBind(model: trainInquiryList[indexPath.row])
         return trainInquiryCell
-        
     }
 }
 
@@ -400,11 +390,6 @@ extension TrainInquiryVC {
         
         selectedIndex = indexPath
         selectedCell.backgroundColor = .korailGray1
-        
         selectedCell.selectedButtonColor()
-        
     }
-    
-    
-
 }
