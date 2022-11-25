@@ -10,6 +10,10 @@
 		67897440292E620A007E2433 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6789743F292E620A007E2433 /* InfoModel.swift */; };
 		67897442292E6226007E2433 /* PeopleInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67897441292E6226007E2433 /* PeopleInfoTableViewCell.swift */; };
 		67897444292E6263007E2433 /* InfoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67897443292E6263007E2433 /* InfoFormVC.swift */; };
+		A36AA1CC29286824002329FA /* TrainInquiryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36AA1CB29286824002329FA /* TrainInquiryVC.swift */; };
+		A3D2FE8E292B774C001A68F9 /* TrainInquiryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */; };
+		A3D2FE90292E64B6001A68F9 /* TrainInquiryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2FE8F292E64B6001A68F9 /* TrainInquiryModel.swift */; };
+		A3D2FE92293071A7001A68F9 /* TrainInquiryResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2FE91293071A7001A68F9 /* TrainInquiryResponseDto.swift */; };
 		CEA59AD22923679600675429 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD12923679600675429 /* UILabel+.swift */; };
 		CEA59AD4292367DF00675429 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD3292367DF00675429 /* UITextField+.swift */; };
 		CEA59AD62923680E00675429 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA59AD52923680E00675429 /* UIView+.swift */; };
@@ -44,6 +48,10 @@
 		6789743F292E620A007E2433 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		67897441292E6226007E2433 /* PeopleInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewCell.swift; sourceTree = "<group>"; };
 		67897443292E6263007E2433 /* InfoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoFormVC.swift; sourceTree = "<group>"; };
+		A36AA1CB29286824002329FA /* TrainInquiryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryVC.swift; sourceTree = "<group>"; };
+		A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryViewCell.swift; sourceTree = "<group>"; };
+		A3D2FE8F292E64B6001A68F9 /* TrainInquiryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryModel.swift; sourceTree = "<group>"; };
+		A3D2FE91293071A7001A68F9 /* TrainInquiryResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainInquiryResponseDto.swift; sourceTree = "<group>"; };
 		CEA59AD12923679600675429 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CEA59AD3292367DF00675429 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		CEA59AD52923680E00675429 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC7444C292A7F6F00C8D56D /* TrailLocationResponseDto.swift */,
+				A3D2FE91293071A7001A68F9 /* TrainInquiryResponseDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 		CED3DFEF2922718D0046F4D4 /* TrainInquiryView */ = {
 			isa = PBXGroup;
 			children = (
+				A36AA1CB29286824002329FA /* TrainInquiryVC.swift */,
+				A3D2FE8D292B774C001A68F9 /* TrainInquiryViewCell.swift */,
+				A3D2FE8F292E64B6001A68F9 /* TrainInquiryModel.swift */,
 			);
 			path = TrainInquiryView;
 			sourceTree = "<group>";
@@ -385,8 +397,11 @@
 				CEC74449292A7E2100C8D56D /* APIConstants.swift in Sources */,
 				CEA59ADA2923687C00675429 /* ApplyShadow.swift in Sources */,
 				67897444292E6263007E2433 /* InfoFormVC.swift in Sources */,
+				A3D2FE90292E64B6001A68F9 /* TrainInquiryModel.swift in Sources */,
 				CEA59AD62923680E00675429 /* UIView+.swift in Sources */,
 				CEAF53C7292280F0005BAB29 /* TabBarController.swift in Sources */,
+				A36AA1CC29286824002329FA /* TrainInquiryVC.swift in Sources */,
+				A3D2FE92293071A7001A68F9 /* TrainInquiryResponseDto.swift in Sources */,
 				CEC74447292A7DFF00C8D56D /* NetworkLoggerPlugin.swift in Sources */,
 				CEAF53BC29227D1F005BAB29 /* ColorLiterals.swift in Sources */,
 				CEC7444B292A7E7200C8D56D /* TrailRouter.swift in Sources */,
@@ -396,6 +411,7 @@
 				CEAF53C92922833C005BAB29 /* LocationFormVC.swift in Sources */,
 				67897440292E620A007E2433 /* InfoModel.swift in Sources */,
 				CED3DFD029226BDE0046F4D4 /* SceneDelegate.swift in Sources */,
+				A3D2FE8E292B774C001A68F9 /* TrainInquiryViewCell.swift in Sources */,
 				CEC74445292A7DE700C8D56D /* Encodable+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

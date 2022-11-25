@@ -191,6 +191,17 @@ final class LocationFormVC: UIViewController {
         config.baseForegroundColor = .white
         config.background.cornerRadius = 10
         $0.configuration = config
+        $0.addTarget(self, action: #selector(touchUpTrainSearchButton), for: .touchUpInside)
+    }
+    
+    private func pushtoTrainInquiryVC() {
+        let trainInquiryVC = TrainInquiryVC()
+        self.navigationController?.pushViewController(trainInquiryVC, animated: true)
+    }
+    
+    @objc
+    private func touchUpTrainSearchButton() {
+        pushtoTrainInquiryVC()
     }
     
     // MARK: - View Life Cycle
@@ -323,6 +334,7 @@ extension LocationFormVC {
         }
     }
 }
+
 
 // MARK: - Network
 
