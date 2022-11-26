@@ -365,7 +365,9 @@ extension TrainInquiryVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let trainInquiryCell = tableView.dequeueReusableCell(withIdentifier: TrainInquiryViewCell.identifier, for: indexPath)
                 as? TrainInquiryViewCell else {return UITableViewCell()}
-        trainInquiryCell.selectionStyle = .none
+        let view = UIView()
+        view.backgroundColor = UIColor.korailGray1
+        trainInquiryCell.selectedBackgroundView = view
         trainInquiryCell.dataBind(model: trainInquiryList[indexPath.row])
         return trainInquiryCell
     }
@@ -375,13 +377,6 @@ extension TrainInquiryVC {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! TrainInquiryViewCell
-        
-        if let selectedIndex = selectedIndex {
-            let previousCell = tableView.cellForRow(at: selectedIndex) as! TrainInquiryViewCell
-            
-            previousCell.backgroundColor = .white
-            previousCell.deselectedButtonColor()
-        }
 
         // 매진일 경우, 함수를 빠져나오게 만듦
         if (trainInquiryList[indexPath.row].standardRoomInfo == "매진") {
@@ -389,7 +384,16 @@ extension TrainInquiryVC {
         }
         
         selectedIndex = indexPath
-        selectedCell.backgroundColor = .korailGray1
         selectedCell.selectedButtonColor()
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? TrainInquiryViewCell else { return }
+        cell.deselectedButtonColor()
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainInquiryViewCell.className, for: indexPath) as? TrainInquiryViewCell else { return }
+        cell.deselectedButtonColor()
     }
 }

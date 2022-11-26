@@ -177,5 +177,9 @@ extension TrainInquiryViewCell {
         "\(data.specialPrice)₩"
     }
 
+    
+//    override func prepareForReuse() {
+//        deselectedButtonColor()
+//    }
 }
 
