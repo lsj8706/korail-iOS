@@ -369,6 +369,13 @@ extension TrainInquiryVC: UITableViewDataSource {
         view.backgroundColor = UIColor.korailGray1
         trainInquiryCell.selectedBackgroundView = view
         trainInquiryCell.dataBind(model: trainInquiryList[indexPath.row])
+        
+        if selectedIndex == indexPath {
+            trainInquiryCell.selectedButtonColor()
+        } else {
+            trainInquiryCell.deselectedButtonColor()
+        }
+        
         return trainInquiryCell
     }
 }
@@ -389,11 +396,6 @@ extension TrainInquiryVC {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? TrainInquiryViewCell else { return }
-        cell.deselectedButtonColor()
-    }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainInquiryViewCell.className, for: indexPath) as? TrainInquiryViewCell else { return }
         cell.deselectedButtonColor()
     }
 }
